@@ -1,13 +1,14 @@
 {
+  "name": "terminal",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "node-pty-prebuilt-multiarch": "latest",
-    "snowpack": "latest",
     "socket.io": "latest",
     "socket.io-client": "latest",
+    "vite": "latest",
     "xterm": "latest",
     "xterm-addon-fit": "latest"
   }

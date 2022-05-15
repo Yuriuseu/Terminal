@@ -1,4 +1,4 @@
-<img alt="logo" align="right" width="72px" height="72px" src="./src/favicon.svg">
+<img alt="logo" align="right" width="72px" height="72px" src="./favicon.svg">
 
 # Terminal
 

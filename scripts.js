@@ -1,12 +1,12 @@
-import xterm from 'xterm'
-import fit from 'xterm-addon-fit'
+import {Terminal} from 'xterm'
+import {FitAddon} from 'xterm-addon-fit'
 import {io} from 'socket.io-client'
 
-const terminal = new xterm.Terminal({cursorBlink: true})
+const terminal = new Terminal({cursorBlink: true})
 terminal.open(document.body)
 terminal.focus()
 
-const fitAddon = new fit.FitAddon()
+const fitAddon = new FitAddon()
 terminal.loadAddon(fitAddon)
 
 const {protocol, hostname, port} = location
@@ -21,5 +21,5 @@ const resize = () => {
   socket.emit('resize', cols, rows)
   fitAddon.fit()
 }
-window.onload = resize
-window.onresize = resize
+window.addEventListener('load', resize)
+window.addEventListener('resize', resize)
